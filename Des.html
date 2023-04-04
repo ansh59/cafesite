@@ -1,0 +1,128 @@
+<html>
+<head>
+    <title>Menu</title>
+    <link rel="stylesheet" type="text/css" href="css\cafestyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="js/cafejs.js"></script>
+    <style>
+        .tabs
+        {
+            margin: 20px;
+        }
+        .tabs li
+        {
+            list-style-type: none;
+            float: left;
+            padding: 10px 20px;
+            color: white;
+            background-color: black;
+            border: 1px solid black;
+            margin-right: 15px;
+            text-transform: uppercase;
+        }
+        .tabs li:hover,.tabs .active
+        {
+            background-color: white;
+            color: black;
+        }
+        .container
+        {
+            text-align: center;
+            box-sizing: border-box;
+            width: 100%;
+            padding-bottom: 20px;
+        }
+        img
+        {
+            height: 300px;
+            width: 400px;
+        }
+        h4
+        {
+            font-weight: bold;
+        }
+        .container .box
+        {
+            width: 31%;
+            height: 320px;
+            float: left;
+            margin: 13px;
+        }
+        
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".btn").click(function(){
+                var value=$(this).attr("data-filter");
+                if(value=="all")
+                {
+                    $(".filter").show("1000");
+                }
+                else
+                {
+                    $(".filter").not("."+value).hide("1000");
+                    $(".filter").filter("."+value).show("1000");
+                } 
+                $("ul .btn").click(function(){
+                    $(this).addClass('active').siblings().removeClass('active');
+                })
+            })
+        })
+    </script>
+</head>    
+<body>
+   
+<div class="container">
+    <ul class="tabs">
+        
+       
+
+        <li class="btn active" data-filter="des">Deserts</li>
+        <div style="clear: both;"></div>
+    </ul>
+    
+    <div class="box filter des">
+        <img src="products\836x663-black-forest-cake.jpg">
+        <h4>Black forest cake</h4>
+    </div>
+    <div class="box filter des">
+        <img src="products\836x663-Black-Forest.jpg">
+        <h4>Black Forest</h4>  
+    </div>
+    <div class="box filter des">
+        <img src="products\836x663-Brownie.jpg">
+        <h4>Brownie</h4>
+    </div>
+    <div class="box filter des">
+        <img src="products\836x663-Chocolate-Icecream.jpg">
+        <h4>Chocolate Icecream</h4>
+    </div>
+    <div class="box filter des">
+        <img src="products\836x663-Coco-Cake.jpg">
+        <h4>Coco Cake</h4>
+    </div>
+    <div class="box filter des">
+        <img src="products\836x663-Coco-Slice.jpg">
+        <h4>Coco Slice</h4>
+    </div>
+    <div class="box filter des">
+        <img src="products\836x663-dutch-truffle-cake.jpg">
+        <h4>Dutch truffle cake</h4>
+    </div>
+    <div class="box filter des">
+        <img src="products\836x663-Eclair.jpg">
+        <h4>Eclair</h4>
+    </div>
+    <div class="box filter des">
+        <img src="products\836x663-pineapple-cake.jpg">
+        <h4>Pineapple cake</h4>
+    </div>
+</div>   
+
+
+   
+</body>    
+</html>

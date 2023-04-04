@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+	<form>
+
+		<h1>Mission Information</h1>
+	<table border="2px solid black" style="width: 400px; height: 200px;">
+
+		<tr >
+			<td style="padding: 20px;">Ship Name:</td>	
+			<td><input type="text" name="ship_name"></td>		
+		</tr>
+
+		<tr>
+			<td  style="padding: 20px;">Trip Date:</td>
+			<td><input type="text" name="ship_name"></td>
+		</tr>
+
+		<tr>
+			<td colspan="2" style="height: 10px;">Mission Goals:</td>
+		</tr>
+
+		<tr>
+			<td style="height: 10px;"><input type="checkbox" name="exploration">Exploration</td>
+			<td style="height:10px"><input type="checkbox" name="contact">Contact</td>
+		</tr>
+
+		<tr>
+			<td style="height:10px">Description</td>
+			<label for="boat">
+			<td><input type="radio" name="gender" id="gender">Motor Sailor
+			<input type="radio" name="gender" id="gender">Narrow boat</td></label>
+		</label>
+		</tr>
+
+		<tr>
+			<td>Crew species:</td>
+			<td>
+      <select name="crew" id="species" multiple>
+        <option value="Xebrax">Xebrax</option>
+        <option value="Snertal">Snertal</option>
+        <option value="Gosny">Gosny</option>
+      </select>
+  </td>
+		</tr>
+
+		<tr>
+			<td>Any additional comments?</td>
+			<td><textarea rows="5" cols="30">Write additional comments here..</textarea></td>
+		</tr>
+
+		<tr>
+			<td colspan="2" style="text-align: center;"><input type="submit" name="query" value="Submit Query">&nbsp<input type="reset" name="reset">
+			</td>
+		</tr>
+		
+	</table>
+
+</form>
+
+</body>
+</html>
